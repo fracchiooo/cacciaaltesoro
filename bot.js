@@ -10,8 +10,8 @@ var bodyParser = require('body-parser');
 var nomisquadre = new Map;
 var domandacorrente = new Map;
 var fatte = new Map;
-var link = Buffer.from('https://lefestediemma.com/blog/wp-content/uploads/2020/12/immagini-natalizie-01.jpg');
-var tot_link = ['https://lefestediemma.com/blog/wp-content/uploads/2020/12/immagini-natalizie-01.jpg', 'https://i.postimg.cc/020StqwY/prova2.jpg', 'https://i.postimg.cc/020StqwY/prova2.jpg', 'https://i.postimg.cc/020StqwY/prova2.jpg', 'https://i.postimg.cc/020StqwY/prova2.jpg', 'https://i.postimg.cc/020StqwY/prova2.jpg'];
+var link = Buffer.from('https://postimg.cc/vcDDBkXT');
+var tot_link = ['https://postimg.cc/bdvL8svc','https://postimg.cc/2L3xxXt8','https://postimg.cc/R6gRKzXD','https://postimg.cc/7GH95LMz','https://postimg.cc/Y4f82Fgk' ];
 
 
 
