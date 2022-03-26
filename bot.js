@@ -27,21 +27,20 @@ function sfondo(numerodom) {
 
 
 
-var dom0 = Buffer.from('domanda0');
-var dom1 = Buffer.from('domanda1');
-var dom2 = Buffer.from('domanda2');
-var dom3 = Buffer.from('domanda3');
-var dom4 = Buffer.from('domanda4');
-var dom5 = Buffer.from('domanda5');
-var domande = [dom0, dom1, dom2, dom3, dom4, dom5];
+var dom0 = Buffer.from('son vestito in bianco e nero, ma non sono juventino. Lo puoi gridare forte perchè sono il ... '+'\n (scrivere il nome degli oggetti che gli stanno poggiati sopra. 5 lettere)');
+var dom1 = Buffer.from('quando si rompono nel paniere sono guai, queste per fortuna non si rompono mai...'+'\n (scrivere il nome del materiale dell oggetto. 5 lettere)');
+var dom2 = Buffer.from('l amore è cieco, il frutto si lanci, si trovi il giardino degli...'+'\n (non so ancora)');
+var dom3 = Buffer.from('se vuoi trovarlo devi scendere laddove cercherai un simbolo di guerra'+'(scrivere il nome dell oggetto appeso al soffitto lì intorno. 10 lettere)');
+var dom4 = Buffer.from('a Roma si chiamano nasoni, qua i nasi non ci sono, ma solo un antico grifone'+'\n (l oggetto da scrivere è incastonato. 10 lettere)');
+var domande = [dom0, dom1, dom2, dom3, dom4];
 
-var risp0 = Buffer.from('1');
-var risp1 = Buffer.from('1');
-var risp2 = Buffer.from('1');
-var risp3 = Buffer.from('1');
-var risp4 = Buffer.from('1');
-var risp5 = Buffer.from('1');
-var risposte = [risp0, risp1, risp2, risp3, risp4, risp5];
+var risp0 = Buffer.from('libri');
+var risp1 = Buffer.from('marmo');
+var risp2 = Buffer.from('');
+var risp3 = Buffer.from('bicicletta');
+var risp4 = Buffer.from('conchiglia');
+
+var risposte = [risp0, risp1, risp2, risp3, risp4];
 
 
 app.post('/', urlencodedParser, function(req, res) {
@@ -160,9 +159,9 @@ function inizio(req, res) {
     var nome = cookies.name;
     var numero = String(nomisquadre.get(String(nome)));
     var temp = (fatte.get(String(nome)));
-    if (temp && temp.length !== 0 && temp.length !== 6) { res.write('<h1 style="position: relative; top:35%; right:3%; text-align:center; color:#33FF66;">risposta giusta!</h1>'); }
+    if (temp && temp.length !== 0 && temp.length !== 5) { res.write('<h1 style="position: relative; top:35%; right:3%; text-align:center; color:#33FF66;">risposta giusta!</h1>'); }
 
-    if (Number(numero) < 6) {
+    if (Number(numero) < 5) {
 
         var boolean = true;
         var casuale;
@@ -170,7 +169,7 @@ function inizio(req, res) {
         if (!domandacorrente.has(String(nome))) {
             while (boolean) {
 
-                casuale = math.randomInt(6);
+                casuale = math.randomInt(5);
                 if (temp.indexOf(Number(casuale)) == -1) { boolean = false; }
 
 
@@ -204,8 +203,14 @@ function inizio(req, res) {
 
 
     } else {
+          sfondo(casuale);
+         res.write('<HEAD><style>body { background-image: url(\'' + String(link) + '\');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;}</style><style type="text/css">H1 {font-size:60px; color:#b8860b}</style></HEAD>');
 
-        res.end('<h1>AVETE RISPOSTO A TUTTE LE DOMANDE!</h1>');
+
+        res.write('<div style="position: relative; top:35%; right:3%; text-align:center">');
+        res.write('<h1 style="color:#b8860b;">IL PREMIO TROVERAI SE DENTRO IL RIFLESSO CERCHERAI</h1>');
+        res.end('<\div>');
+        console.log(String(nome));
         console.log(String(fatte.get(String(nome))));
 
 
