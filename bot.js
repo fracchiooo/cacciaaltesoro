@@ -11,7 +11,7 @@ var nomisquadre = new Map;
 var domandacorrente = new Map;
 var fatte = new Map;
 var link = Buffer.from('https://images.freeimages.com/images/large-previews/d09/spooky-trees-1151024.jpg');
-var tot_link = ['https://i.postimg.cc/bdvL8svc/Whats-App-Image-2022-03-23-at-22-31-28.jpg','https://i.postimg.cc/2L3xxXt8/Whats-App-Image-2022-03-23-at-22-31-29.jpg','https://i.postimg.cc/R6gRKzXD/Whats-App-Image-2022-03-23-at-22-31-29-1.jpg','https://i.postimg.cc/7GH95LMz/Whats-App-Image-2022-03-23-at-22-31-29-2.jpg','https://i.postimg.cc/Y4f82Fgk/Whats-App-Image-2022-03-23-at-22-31-29-3.jpg' ];
+var tot_link = ['https://i.postimg.cc/KKX2dr9v/Whats-App-Image-2022-03-23-at-22-31-28.jpg','https://i.postimg.cc/JsH86d52/Whats-App-Image-2022-03-23-at-22-31-29.jpg','https://i.postimg.cc/PLmjhpcb/Whats-App-Image-2022-03-23-at-22-31-29-1.jpg','https://i.postimg.cc/QHysqr17/Whats-App-Image-2022-03-23-at-22-31-29-2.jpg','https://i.postimg.cc/2V6rv5bm/Whats-App-Image-2022-03-23-at-22-31-29-3.jpg' ];
 
 
 
