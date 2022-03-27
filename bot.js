@@ -10,8 +10,8 @@ var bodyParser = require('body-parser');
 var nomisquadre = new Map;
 var domandacorrente = new Map;
 var fatte = new Map;
-var link = Buffer.from('https://postimg.cc/vcDDBkXT');
-var tot_link = ['https://postimg.cc/bdvL8svc','https://postimg.cc/2L3xxXt8','https://postimg.cc/R6gRKzXD','https://postimg.cc/7GH95LMz','https://postimg.cc/Y4f82Fgk' ];
+var link = Buffer.from('https://images.freeimages.com/images/large-previews/d09/spooky-trees-1151024.jpg');
+var tot_link = ['https://i.postimg.cc/bdvL8svc/Whats-App-Image-2022-03-23-at-22-31-28.jpg','https://i.postimg.cc/2L3xxXt8/Whats-App-Image-2022-03-23-at-22-31-29.jpg','https://i.postimg.cc/R6gRKzXD/Whats-App-Image-2022-03-23-at-22-31-29-1.jpg','https://i.postimg.cc/7GH95LMz/Whats-App-Image-2022-03-23-at-22-31-29-2.jpg','https://i.postimg.cc/Y4f82Fgk/Whats-App-Image-2022-03-23-at-22-31-29-3.jpg' ];
 
 
 
@@ -30,7 +30,7 @@ function sfondo(numerodom) {
 var dom0 = Buffer.from('son vestito in bianco e nero, ma non sono juventino. Lo puoi gridare forte perchè sono il ... '+'\n (scrivere il nome degli oggetti che gli stanno poggiati sopra. 5 lettere)');
 var dom1 = Buffer.from('quando si rompono nel paniere sono guai, queste per fortuna non si rompono mai...'+'\n (scrivere il nome del materiale dell oggetto. 5 lettere)');
 var dom2 = Buffer.from('l amore è cieco, il frutto si lanci, si trovi il giardino degli...'+'\n (non so ancora)');
-var dom3 = Buffer.from('se vuoi trovarlo devi scendere laddove cercherai un simbolo di guerra'+'(scrivere il nome dell oggetto appeso al soffitto lì intorno. 10 lettere)');
+var dom3 = Buffer.from('se vuoi trovarlo devi scendere laddove cercherai un simbolo di guerra'+'(scrivere il nome dell oggetto appeso al soffitto li intorno. 10 lettere)');
 var dom4 = Buffer.from('a Roma si chiamano nasoni, qua i nasi non ci sono, ma solo un antico grifone'+'\n (l oggetto da scrivere è incastonato. 10 lettere)');
 var domande = [dom0, dom1, dom2, dom3, dom4];
 
