@@ -29,9 +29,9 @@ function sfondo(numerodom) {
 
 var dom0 = Buffer.from('son vestito in bianco e nero, ma non sono juventino. Lo puoi gridare forte perch&#232 sono il ... '+'\n (scrivere il nome degli oggetti che gli stanno poggiati sopra. 5 lettere)');
 var dom1 = Buffer.from('quando si rompono nel paniere sono guai, queste per fortuna non si rompono mai...'+'\n (scrivere il nome del materiale dell oggetto. 5 lettere)');
-var dom2 = Buffer.from('l&#205 amore &#232 cieco, il frutto si lanci, si trovi il giardino degli...'+'\n (non so ancora)');
-var dom3 = Buffer.from('se vuoi trovarlo devi scendere laddove cercherai un simbolo di guerra'+'(scrivere il nome dell oggetto appeso al soffitto l&#205 intorno. 10 lettere)');
-var dom4 = Buffer.from('a Roma si chiamano nasoni, qua i nasi non ci sono, ma solo un antico grifone'+'\n (l&#205 oggetto da scrivere &#232 incastonato. 10 lettere)');
+var dom2 = Buffer.from('l&#180 amore &#232 cieco, il frutto si lanci, si trovi il giardino degli...'+'\n (non so ancora)');
+var dom3 = Buffer.from('se vuoi trovarlo devi scendere laddove cercherai un simbolo di guerra'+'(scrivere il nome dell&#180 oggetto appeso al soffitto della stanza precedente. 10 lettere)');
+var dom4 = Buffer.from('a Roma si chiamano nasoni, qua i nasi non ci sono, ma solo un antico grifone'+'\n (l&#180 oggetto da scrivere &#232 incastonato. 10 lettere)');
 var domande = [dom0, dom1, dom2, dom3, dom4];
 
 var risp0 = Buffer.from('libri');
@@ -203,7 +203,7 @@ function inizio(req, res) {
 
 
     } else {
-          sfondo(casuale);
+         // sfondo(casuale);
          res.write('<HEAD><style>body { background-image: url(\'' + String(link) + '\');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;}</style><style type="text/css">H1 {font-size:60px; color:#b8860b}</style></HEAD>');
 
 
@@ -283,6 +283,7 @@ function onRequest(req, res) {
         var temp = '<form action=" ' + 'http://' + req.get('host') + '/inizio' + '">';
         res.write('<div  style="position: relative; top:47%; right:3%; text-align:center" >');
         res.write(String(temp));
+        res.write('<h1>la prima domanda indica la stanza dove recarsi, per poter poi scrivere il nome dell&#180 oggetto indicato tra parentesi</h1>');
         res.write('<input   style="height:50px; width:100px" type="submit"   value="inizio" >');
 
         res.write('</form>');
