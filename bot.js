@@ -78,8 +78,9 @@ function risposta(req, res) {
     var giusta = risposte[Number(num_domanda)];
 
     var risposta = req.body.risposta;
-    console.log(String(risposta));
-    if (String(risposta).toLowerCase() === String(giusta)) {
+   // console.log(String(risposta));
+    
+    if (String(risposta)!=='' && String(risposta).toLowerCase() === String(giusta)) {
 
         //  res.write('<h1>risposta giusta!</h1>');
         nomisquadre.delete(String(nome));
