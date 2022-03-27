@@ -281,7 +281,7 @@ function onRequest(req, res) {
         res.write('<HEAD><style>body { background-image: url(\'' + String(link) + '\');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;}</style><style type="text/css">H1 {font-size:60px; color:#b8860b}</style></HEAD>');
 
         var temp = '<form action=" ' + 'http://' + req.get('host') + '/inizio' + '">';
-        res.write('<div  style="position: relative; top:47%; right:3%; text-align:center" >');
+        res.write('<div  style="position: relative; top:47%; right:0%; text-align:center" >');
         res.write(String(temp));
         res.write('<h1>la prima domanda indica la stanza dove recarsi, per poter poi scrivere il nome dell&#180 oggetto indicato tra parentesi</h1>');
         res.write('<input   style="height:50px; width:100px" type="submit"   value="inizio" >');
