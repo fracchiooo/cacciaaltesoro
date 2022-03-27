@@ -36,7 +36,7 @@ var domande = [dom0, dom1, dom2, dom3, dom4];
 
 var risp0 = Buffer.from('libri');
 var risp1 = Buffer.from('marmo');
-var risp2 = Buffer.from('');
+var risp2 = Buffer.from('zappa');
 var risp3 = Buffer.from('bicicletta');
 var risp4 = Buffer.from('conchiglia');
 
