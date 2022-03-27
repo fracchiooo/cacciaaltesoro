@@ -127,7 +127,7 @@ app.get('/inizio/domanda', function(req, res) {
     sfondo(doman);
     res.write('<HEAD><style>body { background-image: url(\'' + String(link) + '\');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;}</style><style type="text/css">H1 {font-size:60px; color:#b8860b}</style></HEAD>');
 
-    res.write('<div style="position: relative; top:35%; right:3%; text-align:center">');
+    res.write('<div style="position: relative; top:35%; right:0%; text-align:center">');
     //res.write('<p style="background-image: url(\'prova.jpg\');">');
 
     res.write('<form method="POST" action=" ' + 'http://' + req.get('host') + '/risposta' + '">');
@@ -159,7 +159,7 @@ function inizio(req, res) {
     var nome = cookies.name;
     var numero = String(nomisquadre.get(String(nome)));
     var temp = (fatte.get(String(nome)));
-    if (temp && temp.length !== 0 && temp.length !== 5) { res.write('<h1 style="position: relative; top:35%; right:3%; text-align:center; color:#33FF66;">risposta giusta!</h1>'); }
+    if (temp && temp.length !== 0 && temp.length !== 5) { res.write('<h1 style="position: relative; top:35%; right:0%; text-align:center; color:#33FF66;">risposta giusta!</h1>'); }
 
     if (Number(numero) < 5) {
 
@@ -189,7 +189,7 @@ function inizio(req, res) {
         res.write('<HEAD><style>body { background-image: url(\'' + String(link) + '\');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;}</style><style type="text/css">H1 {font-size:60px; color:#b8860b}</style></HEAD>');
 
 
-        res.write('<div style="position: relative; top:35%; right:3%; text-align:center">');
+        res.write('<div style="position: relative; top:35%; right:0%; text-align:center">');
         //  res.write('<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fotocommunity.it%2Fphoto%2Fscale-spettrali-francesco-sandrini%2F22667316&psig=AOvVaw2NDY6-trjkbY-dbQetOdZy&ust=1648057318113000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjf7o2i2vYCFQAAAAAdAAAAABAD" width="100%" height="100%"');
         //res.write('<p style="background-image: url(\'prova.jpg\');">');
 
@@ -207,7 +207,7 @@ function inizio(req, res) {
          res.write('<HEAD><style>body { background-image: url(\'' + String(link) + '\');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;}</style><style type="text/css">H1 {font-size:60px; color:#b8860b}</style></HEAD>');
 
 
-        res.write('<div style="position: relative; top:35%; right:3%; text-align:center">');
+        res.write('<div style="position: relative; top:35%; right:0%; text-align:center">');
         res.write('<h1 style="color:#b8860b;">IL PREMIO TROVERAI SE DENTRO IL RIFLESSO CERCHERAI</h1>');
         res.end('<\div>');
         console.log(String(nome));
