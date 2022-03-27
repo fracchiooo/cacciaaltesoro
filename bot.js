@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 var nomisquadre = new Map;
 var domandacorrente = new Map;
 var fatte = new Map;
-var link = Buffer.from('https://images.freeimages.com/images/large-previews/d09/spooky-trees-1151024.jpg');
+var link = Buffer.from('https://ibb.co/68v04fy');
 var tot_link = ['https://i.postimg.cc/RqqgH3Qv/Whats-App-Image-2022-03-23-at-22-31-28.jpg','https://i.postimg.cc/gxysW3dH/Whats-App-Image-2022-03-23-at-22-31-29.jpg','https://i.postimg.cc/68xcgMsQ/Whats-App-Image-2022-03-23-at-22-31-29-1.jpg','https://i.postimg.cc/py7qY2qz/Whats-App-Image-2022-03-23-at-22-31-29-2.jpg','https://i.postimg.cc/CzqJcWQt/Whats-App-Image-2022-03-23-at-22-31-29-3.jpg' ];
 
 
