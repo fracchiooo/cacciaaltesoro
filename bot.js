@@ -30,7 +30,7 @@ function sfondo(numerodom) {
 var dom0 = Buffer.from('son vestito in bianco e nero, ma non sono juventino. Lo puoi gridare forte perchè sono il ... '+'\n (scrivere il nome degli oggetti che gli stanno poggiati sopra. 5 lettere)');
 var dom1 = Buffer.from('quando si rompono nel paniere sono guai, queste per fortuna non si rompono mai...'+'\n (scrivere il nome del materiale dell oggetto. 5 lettere)');
 var dom2 = Buffer.from('l amore è cieco, il frutto si lanci, si trovi il giardino degli...'+'\n (non so ancora)');
-var dom3 = Buffer.from('se vuoi trovarlo devi scendere laddove cercherai un simbolo di guerra'+'(scrivere il nome dell oggetto appeso al soffitto li intorno. 10 lettere)');
+var dom3 = Buffer.from('se vuoi trovarlo devi scendere laddove cercherai un simbolo di guerra'+'(scrivere il nome dell oggetto appeso al soffitto l'+&#141+' intorno. 10 lettere)');
 var dom4 = Buffer.from('a Roma si chiamano nasoni, qua i nasi non ci sono, ma solo un antico grifone'+'\n (l oggetto da scrivere è incastonato. 10 lettere)');
 var domande = [dom0, dom1, dom2, dom3, dom4];
 
