@@ -11,7 +11,7 @@ var nomisquadre = new Map;
 var domandacorrente = new Map;
 var fatte = new Map;
 var link = Buffer.from('https://images.freeimages.com/images/large-previews/d09/spooky-trees-1151024.jpg');
-var tot_link = ['https://i.ibb.co/2YT53NF/Whats-App-Image-2022-03-23-at-22-31-28.jpg','https://i.ibb.co/7K1G0vc/Whats-App-Image-2022-03-23-at-22-31-29.jpg','https://i.ibb.co/86cdDwZ/Whats-App-Image-2022-03-23-at-22-31-29-1.jpg','https://i.ibb.co/y4LHb7r/Whats-App-Image-2022-03-23-at-22-31-29-2.jpg','https://i.ibb.co/jzVkL18/Whats-App-Image-2022-03-23-at-22-31-29-3.jpg' ];
+var tot_link = ['https://i.ibb.co/2YT53NF/Whats-App-Image-2022-03-23-at-22-31-28.jpg','https://i.ibb.co/7K1G0vc/Whats-App-Image-2022-03-23-at-22-31-29.jpg','https://i.ibb.co/jzVkL18/Whats-App-Image-2022-03-23-at-22-31-29-3.jpg','https://i.ibb.co/y4LHb7r/Whats-App-Image-2022-03-23-at-22-31-29-2.jpg' ];
 
 
 
@@ -29,18 +29,16 @@ function sfondo(numerodom) {
 
 var dom0 = Buffer.from('son vestito in bianco e nero, ma non sono juventino. Lo puoi gridare forte perch&#232 sono il ... '+'\n (scrivere il nome degli oggetti che gli stanno poggiati sopra. 5 lettere)');
 var dom1 = Buffer.from('quando si rompono nel paniere sono guai, queste per fortuna non si rompono mai...'+'\n (scrivere il nome del materiale dell oggetto. 5 lettere)');
-var dom2 = Buffer.from('l&#180 amore &#232 cieco, il frutto si lanci, si trovi il giardino degli...'+'\n (l&#180 oggetto da scrivere sta l&#237 per terra. 5 lettere)');
+var dom2 = Buffer.from('a Roma si chiamano nasoni, qua i nasi non ci sono, ma solo un antico grifone'+'\n (l&#180 oggetto da scrivere &#232 incastonato l&#237. 10 lettere)');
 var dom3 = Buffer.from('se vuoi trovarlo devi scendere laddove cercherai un simbolo di guerra'+'(scrivere il nome dell&#180 oggetto appeso al soffitto della stanza precedente. 10 lettere)');
-var dom4 = Buffer.from('a Roma si chiamano nasoni, qua i nasi non ci sono, ma solo un antico grifone'+'\n (l&#180 oggetto da scrivere &#232 incastonato l&#237. 10 lettere)');
-var domande = [dom0, dom1, dom2, dom3, dom4];
+var domande = [dom0, dom1, dom2, dom3];
 
 var risp0 = Buffer.from('libri');
 var risp1 = Buffer.from('marmo');
-var risp2 = Buffer.from('zappa');
+var risp2 = Buffer.from('conchiglia');
 var risp3 = Buffer.from('bicicletta');
-var risp4 = Buffer.from('conchiglia');
 
-var risposte = [risp0, risp1, risp2, risp3, risp4];
+var risposte = [risp0, risp1, risp2, risp3];
 
 
 app.post('/', urlencodedParser, function(req, res) {
@@ -160,9 +158,9 @@ function inizio(req, res) {
     var nome = cookies.name;
     var numero = String(nomisquadre.get(String(nome)));
     var temp = (fatte.get(String(nome)));
-    if (temp && temp.length !== 0 && temp.length !== 5) { res.write('<h1 style="position: relative; top:35%; right:0%; text-align:center; color:#33FF66;">risposta giusta!</h1>'); }
+    if (temp && temp.length !== 0 && temp.length !== 4) { res.write('<h1 style="position: relative; top:35%; right:0%; text-align:center; color:#33FF66;">risposta giusta!</h1>'); }
 
-    if (Number(numero) < 5) {
+    if (Number(numero) < 4) {
 
         var boolean = true;
         var casuale;
@@ -170,7 +168,7 @@ function inizio(req, res) {
         if (!domandacorrente.has(String(nome))) {
             while (boolean) {
 
-                casuale = math.randomInt(5);
+                casuale = math.randomInt(4);
                 if (temp.indexOf(Number(casuale)) == -1) { boolean = false; }
 
 
